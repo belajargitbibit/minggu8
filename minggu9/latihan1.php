@@ -42,19 +42,18 @@ $hewan = [
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jenis-Jenis Hewan dan Pengelompokannya</title>
+    <title>Latihan GET</title>
 </head>
+
 <body>
-    <h1>List Nama Hewan</h1>
-    <?php foreach ($hewan as $hwn): ?>
-    <ul>
+    <h1>Daftar Hewan</h1>
+<ul>
+    <?php foreach ($hewan as $h):?>
         <li>
-            <img src="img/<?= $hwn ["gambar"] ;?>">
+            <a href="latihan2.php?nama=<?= $h["nama"]; ?>&kelompok= <?= $h["kelompok"]; ?>&jenis= <?= $h["jenis"]; ?>&gambar=<?= $h["gambar"];?> "><?= $h["nama"]; ?></a>
         </li>
-        <li>Nama : <?= $hwn["nama"] ?></li>
-        <li>Kelompok : <?= $hwn["kelompok"] ?></li>
-        <li>Jenis : <?= $hwn["jenis"] ?></li>
-    </ul>
+
     <?php endforeach; ?>
+</ul>   
 </body>
 </html>
